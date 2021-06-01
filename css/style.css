@@ -9,6 +9,7 @@ table {
   max-width: 700px;
   max-height: 800px;
   margin: 0 auto;
+  position: relative;
 }
 .game_header {
   max-width: 633px;
@@ -37,4 +38,40 @@ td {
 }
 .blue {
   background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.red {
+  background-color: red;
+}
+.game_title {
+  margin: 0;
+}
+.game_alert {
+  display: none;
+  max-height: 130px;
+  width: 175px;
+  border-radius: 3px;
+  padding: 20px;
+  position: absolute;
+  background-color: gainsboro;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.difficulty_button {
+  cursor: pointer;
+}
+.difficulty_button:not(:last-of-type) {
+  margin-right: 5px;
+}
+.display_block {
+  display: block;
 }
