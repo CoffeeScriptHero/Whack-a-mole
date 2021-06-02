@@ -50,8 +50,8 @@ td {
 }
 .game_alert {
   display: none;
-  max-height: 140px;
-  width: 175px;
+  max-height: 145px;
+  width: 195px;
   border-radius: 3px;
   padding: 20px;
   position: absolute;
@@ -74,4 +74,9 @@ td {
 }
 .display_block {
   display: block;
+}
+.main_title {
+  margin: 0;
+  font-size: 55px;
+  font-weight: 700;
 }
