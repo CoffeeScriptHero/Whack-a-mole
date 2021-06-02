@@ -118,7 +118,7 @@ const computerScore = new GameScore(
   0
 );
 
-const difficultyLevel = new DifficultyLevel(800);
+const difficultyLevel = new DifficultyLevel(5);
 
 const startButton = new Button(document.querySelector(".button"));
 
@@ -183,6 +183,7 @@ const updateGame = () => {
   gameAlert.hideAlert();
   scoreReset();
   startButton.button.className = "button";
+  startButton.button.textContent = "Start Game";
   startButton.beginGame();
 };
 
@@ -194,6 +195,8 @@ function startGame() {
     this.classList.remove("game_started");
     startButton.button.textContent = "Resume game";
     return;
+  } else {
+    startButton.button.textContent = "Pause game";
   }
   this.classList.add("game_started");
   tableCell.listenClick();
