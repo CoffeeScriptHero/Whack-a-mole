@@ -118,7 +118,7 @@ const computerScore = new GameScore(
   0
 );
 
-const difficultyLevel = new DifficultyLevel(800);
+const difficultyLevel = new DifficultyLevel(5);
 const startButton = new Button(document.querySelector(".button"));
 
 startButton.buttonHandler();
@@ -131,7 +131,7 @@ const hardBtn = new Button(document.querySelector(".hard_btn"));
 
 easyBtn.changeDifficulty(1500);
 mediumBtn.changeDifficulty(1000);
-hardBtn.changeDifficulty(500);
+hardBtn.changeDifficulty(600);
 
 const mainTitle = new MainTitle(document.querySelector(".main_title"));
 
