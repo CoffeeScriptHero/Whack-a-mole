@@ -118,7 +118,7 @@ const computerScore = new GameScore(
   0
 );
 
-const difficultyLevel = new DifficultyLevel(1000);
+const difficultyLevel = new DifficultyLevel(800);
 
 const startButton = new Button(document.querySelector(".button"));
 
