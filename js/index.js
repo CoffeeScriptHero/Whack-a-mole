@@ -35,18 +35,14 @@ class TableCell {
     this.tableCell = tableCell;
   }
   getRndCell(min, max) {
-    return Math.floor(Math.random() * 100);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   activateRndCell() {
-    for (const key in this) {
-      const currentCell = this[key][this.getRndCell(0, 99)];
-      if (currentCell.className === "blue") {
-        return currentCell;
-      } else {
-        currentCell.classList.add("blue");
-        return currentCell;
-      }
-    }
+    const tdArr = document.querySelectorAll(`td:not([class])`);
+    const index = this.getRndCell(0, tdArr.length - 1);
+    const currentCell = tdArr[index];
+    currentCell.classList.add("blue");
+    return currentCell;
   }
   listenClick() {
     for (const key in this.tableCell) {
@@ -124,7 +120,6 @@ const startButton = new Button(document.querySelector(".button"));
 startButton.buttonHandler();
 
 const tableCell = new TableCell(document.querySelectorAll("td"));
-
 const easyBtn = new Button(document.querySelector(".easy_btn"));
 const mediumBtn = new Button(document.querySelector(".medium_btn"));
 const hardBtn = new Button(document.querySelector(".hard_btn"));
@@ -176,7 +171,7 @@ const scoreReset = () => {
 
 const updateGame = () => {
   tableCell.tableCell.forEach((element) => {
-    element.className = "";
+    element.removeAttribute("class");
   });
   const gameAlert = new GameAlert(document.querySelector(".game_alert"));
   gameAlert.hideAlert();
